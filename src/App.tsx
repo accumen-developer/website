@@ -1,6 +1,12 @@
 import React from 'react';
 import { Header } from './components/layout/Header';
 import { HeroSection } from './components/sections/HeroSection';
+import { AboutUsSection } from './components/sections/AboutUsSection';
+import { TechnologiesSection } from './components/sections/TechnologiesSection';
+import { WhyChooseUsSection } from './components/sections/WhyChooseUsSection';
+import { IndustriesSection } from './components/sections/IndustriesSection';
+import { ProductsSection } from './components/sections/ProductsSection';
+import { ITServicesSection } from './components/sections/ITServicesSection';
 import { CompanyLogos } from './components/sections/CompanyLogos';
 import { IntegrationsSection } from './components/sections/IntegrationsSection';
 import { InsightsSection } from './components/sections/InsightsSection';
@@ -63,6 +69,12 @@ function App() {
           </div>
 
           <HeroSection />
+          <AboutUsSection />
+          <TechnologiesSection />
+          <WhyChooseUsSection />
+          <IndustriesSection />
+          <ProductsSection />
+          <ITServicesSection />
           <IntegrationsSection />
           <InsightsSection />
           <MarketingSection />

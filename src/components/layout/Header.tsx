@@ -9,13 +9,14 @@ export function Header() {
           <div className="static box-content shrink min-h-0 min-w-0 md:relative md:aspect-auto md:box-border md:shrink-0 md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
             <a href="./#hero" className="static text-black [align-items:normal] box-content gap-x-[normal] inline h-auto justify-normal gap-y-[normal] w-auto md:relative md:text-blue-700 md:content-center md:items-center md:aspect-auto md:box-border md:gap-x-2.5 md:flex md:h-9 md:justify-start md:overscroll-x-auto md:overscroll-y-auto md:gap-y-2.5 md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-[113px] md:overflow-hidden md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
               <div className="static box-content basis-auto grow-0 shrink h-auto min-h-0 min-w-0 w-auto md:relative md:aspect-auto md:box-border md:basis-0 md:grow md:shrink-0 md:h-full md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-px md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
-                <div className="static box-content inset-auto md:absolute md:aspect-auto md:box-border md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:inset-0">
+                <div className="static box-content inset-auto md:absolute md:aspect-auto md:box-border md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:inset-0 flex items-center gap-2">
                   <img 
                     sizes="max(100vw, 1px)" 
-                    src="https://c.animaapp.com/mdyshqnrhjJKpN/assets/on7xUpJ1SM94eAeiyf04v5F4rjQ.png" 
-                    alt="logo" 
+                    src="https://drive.google.com/file/d/13uSljCWtC2qWyhcL_3X-0SczWfpq-Nu5/view?usp=sharing"
+                    alt="Accumen Bridge logo" 
                     className="box-content h-auto object-fill object-[50%_50%] align-middle w-auto md:aspect-[auto_428_/_162] md:box-border md:h-full md:object-contain md:object-[0%_50%] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:align-baseline md:w-full md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]" 
                   />
+                  <span className="font-bold text-lg text-blue-700">Accumen Bridge</span>
                 </div>
               </div>
             </a>

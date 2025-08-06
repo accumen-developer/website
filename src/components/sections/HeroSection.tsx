@@ -27,23 +27,12 @@ export function HeroSection() {
           <div className="relative content-center items-center box-border gap-x-6 flex flex-col shrink-0 h-min justify-center gap-y-6 w-full">
             <div className="relative box-border flex flex-col shrink-0 justify-start break-words w-full z-[2]">
               <h1 className="text-slate-900 text-[40px] box-border tracking-[-0.4px] leading-[48px] break-words text-center font-plus_jakarta_sans md:text-7xl md:tracking-[-0.72px] md:leading-[86.4px]">
-                <span className="text-[40px] box-border inline-block tracking-[-0.4px] leading-[48px] break-words md:text-7xl md:tracking-[-0.72px] md:leading-[86.4px]">Automate.</span>
-                <span className="text-[40px] box-border inline-block tracking-[-0.4px] leading-[48px] break-words md:text-7xl md:tracking-[-0.72px] md:leading-[86.4px]">Engage.</span>
-                <span className="text-[40px] box-border inline-block tracking-[-0.4px] leading-[48px] break-words md:text-7xl md:tracking-[-0.72px] md:leading-[86.4px]">Convert.</span>
-                <span className="text-[40px] box-border inline-block tracking-[-0.4px] leading-[48px] break-words md:text-7xl md:tracking-[-0.72px] md:leading-[86.4px]">Powered</span>
-                <span className="text-[40px] box-border inline-block tracking-[-0.4px] leading-[48px] break-words md:text-7xl md:tracking-[-0.72px] md:leading-[86.4px]">by</span>
-                <span className="text-[40px] box-border inline-block tracking-[-0.4px] leading-[48px] break-words md:text-7xl md:tracking-[-0.72px] md:leading-[86.4px]">AI.</span>
+                <span className="text-[40px] box-border inline-block tracking-[-0.4px] leading-[48px] break-words md:text-7xl md:tracking-[-0.72px] md:leading-[86.4px]">Bridging Innovation with Intelligence.</span>
               </h1>
             </div>
             <div className="relative box-border flex flex-col shrink-0 justify-start max-w-screen-sm break-words w-full">
               <p className="text-slate-900 text-base box-border leading-6 break-words text-center font-inter">
-                <span className="box-border inline-block break-words">Your</span>
-                <span className="box-border inline-block break-words">journey</span>
-                <span className="box-border inline-block break-words">to</span>
-                <span className="box-border inline-block break-words">AI-powered</span>
-                <span className="box-border inline-block break-words">marketing</span>
-                <span className="box-border inline-block break-words">starts</span>
-                <span className="box-border inline-block break-words">here</span>
+                <span className="box-border inline-block break-words">Accumenbridge is a tech startup transforming industries with AI, Blockchain, and IoT, delivering intelligent, scalable, and secure technology systems.</span>
               </p>
             </div>
           </div>
@@ -53,7 +42,7 @@ export function HeroSection() {
               <a href="https://framer.link/Vu5MARe" className="relative text-blue-700 content-center items-center bg-[linear-gradient(125deg,rgb(119,75,229)_-4%,rgb(119,75,229)_100%)] shadow-[rgb(192,176,232)_0px_1px_2px_0px_inset,rgba(99,69,173,0.35)_0px_0.706592px_0.706592px_-0.583333px,rgba(99,69,173,0.34)_0px_1.80656px_1.80656px_-1.16667px,rgba(99,69,173,0.33)_0px_3.62176px_3.62176px_-1.75px,rgba(99,69,173,0.3)_0px_6.8656px_6.8656px_-2.33333px,rgba(99,69,173,0.26)_0px_13.6468px_13.6468px_-2.91667px,rgba(99,69,173,0.15)_0px_30px_30px_-3.5px] box-border gap-x-1.5 flex h-min justify-center gap-y-1.5 w-min overflow-hidden px-6 py-3 rounded-[10px]">
                 <div className="relative content-center items-center box-border gap-x-2 flex shrink-0 h-min justify-start gap-y-2 w-min">
                   <div className="relative box-border flex flex-col shrink-0 justify-start text-nowrap">
-                    <p className="text-white text-sm font-medium box-border leading-[22.4px] text-nowrap font-inter">Get Started</p>
+                    <p className="text-white text-sm font-medium box-border leading-[22.4px] text-nowrap font-inter">Explore Products</p>
                   </div>
                   <div className="relative box-border shrink-0 h-5 w-5">
                     <div className="box-border contents">
@@ -67,7 +56,7 @@ export function HeroSection() {
               <a href="./#features" className="relative text-blue-700 content-center items-center bg-[linear-gradient(127deg,rgb(14,28,41)_-68%,rgb(50,61,104)_100%)] shadow-[rgb(184,193,230)_0px_1px_2px_0px_inset,rgba(46,64,128,0.35)_0px_0.706592px_0.706592px_-0.583333px,rgba(46,64,128,0.34)_0px_1.80656px_1.80656px_-1.16667px,rgba(46,64,128,0.33)_0px_3.62176px_3.62176px_-1.75px,rgba(46,64,128,0.3)_0px_6.8656px_6.8656px_-2.33333px,rgba(46,64,128,0.26)_0px_13.6468px_13.6468px_-2.91667px,rgba(46,64,128,0.15)_0px_30px_30px_-3.5px] box-border gap-x-1.5 flex h-min justify-center gap-y-1.5 w-min overflow-hidden px-6 py-3 rounded-[10px]">
                 <div className="relative content-center items-center box-border gap-x-2 flex shrink-0 h-min justify-start gap-y-2 w-min">
                   <div className="relative box-border flex flex-col shrink-0 justify-start order-1 text-nowrap">
-                    <p className="text-white text-sm font-medium box-border leading-[22.4px] text-nowrap font-inter">Learn More</p>
+                    <p className="text-white text-sm font-medium box-border leading-[22.4px] text-nowrap font-inter">Contact Us</p>
                   </div>
                   <div className="relative box-border shrink-0 h-5 w-5">
                     <div className="box-border contents">
