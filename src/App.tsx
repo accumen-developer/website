@@ -75,12 +75,12 @@ function App() {
           <IndustriesSection />
           <ProductsSection />
           <ITServicesSection />
-          <IntegrationsSection />
+          {/* <IntegrationsSection />
           <InsightsSection />
           <MarketingSection />
           <PricingSection />
           <FAQSection />
-          <TestimonialsSection />
+          <TestimonialsSection /> */}
           <CTASection />
         </div>
         

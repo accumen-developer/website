@@ -69,7 +69,7 @@ export function HeroSection() {
           </div>
         </div>
         
-        <div className="relative content-center items-center aspect-[1.16667_/_1] box-border gap-x-8 flex flex-col shrink-0 justify-center gap-y-8 w-full rounded-[10px]">
+        {/* <div className="relative content-center items-center aspect-[1.16667_/_1] box-border gap-x-8 flex flex-col shrink-0 justify-center gap-y-8 w-full rounded-[10px]">
           <div className="absolute box-border rounded-[10px] inset-0">
             <img src="https://c.animaapp.com/mdyshqnrhjJKpN/assets/Qs4fMRAik4VFOt3fiZeT875RV4.png" alt="dashboard" className="aspect-[auto_2808_/_2390] box-border h-full object-cover object-[0%_0%] w-full rounded-[10px]" />
           </div>
@@ -97,9 +97,9 @@ export function HeroSection() {
             </div>
             <div className="static bg-transparent shadow-none box-content shrink h-auto transform-none w-auto z-auto rounded-none left-auto top-auto md:absolute md:aspect-auto md:bg-violet-600 md:shadow-[rgba(16,49,77,0.21)_0px_0.706592px_0.706592px_-0.583333px,rgba(16,49,77,0.2)_0px_1.80656px_1.80656px_-1.16667px,rgba(16,49,77,0.2)_0px_3.62176px_3.62176px_-1.75px,rgba(16,49,77,0.18)_0px_6.8656px_6.8656px_-2.33333px,rgba(16,49,77,0.16)_0px_13.6468px_13.6468px_-2.91667px,rgba(16,49,77,0.09)_0px_30px_30px_-3.5px] md:box-border md:shrink-0 md:h-5 md:left-[calc(50%_-_10px)] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:rotate-45 md:w-5 md:z-[1] md:overflow-hidden md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:rounded-bl md:rounded-br md:rounded-tl md:rounded-tr md:top-4"></div>
           </div>
-        </div>
+        </div> */}
         
-        <CompanyLogos />
+        {/* <CompanyLogos /> */}
       </div>
     </section>
   );
