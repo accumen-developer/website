@@ -1,5 +1,6 @@
 import React from 'react';
 import { navigationItems } from '../../data/navigation';
+import logo from '../../assets/images/logo.png'
 
 export function Header() {
   return (
@@ -12,11 +13,11 @@ export function Header() {
                 <div className="static box-content inset-auto md:absolute md:aspect-auto md:box-border md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:inset-0 flex items-center gap-2">
                   <img 
                     sizes="max(100vw, 1px)" 
-                    src="https://drive.google.com/file/d/13uSljCWtC2qWyhcL_3X-0SczWfpq-Nu5/view?usp=sharing"
+                    src={logo}
                     alt="Accumen Bridge logo" 
                     className="box-content h-auto object-fill object-[50%_50%] align-middle w-auto md:aspect-[auto_428_/_162] md:box-border md:h-full md:object-contain md:object-[0%_50%] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:align-baseline md:w-full md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]" 
                   />
-                  <span className="font-bold text-lg text-blue-700">Accumen Bridge</span>
+                  {/* <span className="font-bold text-lg text-blue-700">Accumen Bridge</span> */}
                 </div>
               </div>
             </a>
