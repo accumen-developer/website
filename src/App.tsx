@@ -1,22 +1,12 @@
 import React from 'react';
 import { Header } from './components/layout/Header';
-import { HeroSection } from './components/sections/HeroSection';
-import { AboutUsSection } from './components/sections/AboutUsSection';
-import { TechnologiesSection } from './components/sections/TechnologiesSection';
-import { WhyChooseUsSection } from './components/sections/WhyChooseUsSection';
-import { IndustriesSection } from './components/sections/IndustriesSection';
-import { ProductsSection } from './components/sections/ProductsSection';
-import { ITServicesSection } from './components/sections/ITServicesSection';
-import { CompanyLogos } from './components/sections/CompanyLogos';
-import { IntegrationsSection } from './components/sections/IntegrationsSection';
-import { InsightsSection } from './components/sections/InsightsSection';
-import { MarketingSection } from './components/sections/MarketingSection';
-import { PricingSection } from './components/sections/PricingSection';
-import { FAQSection } from './components/sections/FAQSection';
-import { TestimonialsSection } from './components/sections/TestimonialsSection';
-import { CTASection } from './components/sections/CTASection';
 import { Footer } from './components/layout/Footer';
 import { FloatingElements } from './components/ui/FloatingElements';
+import Home from './components/Pages/Home';
+import { Routes, Route, Link } from 'react-router-dom';
+import Products from './components/Pages/Products';
+import Services from './components/Pages/Services';
+import Contactus from './components/Pages/Contactus';
 
 function App() {
   return (
@@ -29,7 +19,7 @@ function App() {
               <Header />
             </div>
           </div>
-          
+
           {/* Background decorative elements */}
           <div className="absolute bg-sky-50/90 box-border shrink-0 mix-blend-screen z-[1] overflow-hidden inset-0"></div>
           <div className="absolute aspect-[1.5425_/_1] box-border shrink-0 mix-blend-screen translate-x-[-449.397px] translate-y-[0.628833px] w-[900px] z-[1] left-2/4 top-[47px] md:translate-x-[-430.91px] md:translate-y-[19.9022px]">
@@ -68,22 +58,14 @@ function App() {
             </div>
           </div>
 
-          <HeroSection />
-          <AboutUsSection />
-          <WhyChooseUsSection />
-          <TechnologiesSection />
-          <ProductsSection />
-          <ITServicesSection />
-          <IndustriesSection />
-          {/* <IntegrationsSection />
-          <InsightsSection />
-          <MarketingSection />
-          <PricingSection />
-          <FAQSection />
-          <TestimonialsSection /> */}
-          <CTASection />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/contact-us" element={<Contactus />} />
+          </Routes>
         </div>
-        
+
         <Footer />
         <FloatingElements />
       </div>
