@@ -3,7 +3,7 @@ import { CompanyLogos } from './CompanyLogos';
 
 export function HeroSection() {
   return (
-    <section className="relative content-center items-center box-border gap-x-20 flex flex-col shrink-0 h-min justify-center gap-y-20 w-full z-[1] overflow-hidden pt-[120px] pb-20 px-[18px] md:gap-x-8 md:gap-y-8 md:pt-40 md:pb-[100px] md:px-10">
+    <section className="relative content-center items-center box-border gap-x-20 flex flex-col shrink-0 h-min justify-center gap-y-20 w-full z-[1] overflow-hidden pt-[120px] pb-20 px-[18px] md:gap-x-8 md:gap-y-8 md:pt-40 md:pb-[100px] md:px-10" data-aos="fade-up">
       <div className="[mask-image:radial-gradient(125%_100%_at_0%_0%,rgb(0,0,0)_0%,rgba(0,0,0,0.224)_88.2883%,rgba(0,0,0,0)_100%)] absolute bg-[radial-gradient(100%_100%_at_0%_0%,rgb(209,209,209)_0%,rgb(246,251,255)_100%)] box-border gap-x-2.5 shrink-0 h-[2000px] opacity-75 gap-y-2.5 z-[1] overflow-hidden top-0 inset-x-0">
         <div className="[mask-image:linear-gradient(90deg,rgba(0,0,0,0)_0%,rgb(0,0,0)_20.0362%,rgba(0,0,0,0)_36.175%,rgb(0,0,0)_55.4054%,rgba(0,0,0,0.13)_67.1171%,rgb(0,0,0)_78.2306%,rgba(0,0,0,0)_97.2973%)] absolute bg-[linear-gradient(rgba(255,255,255,0.5),rgb(255,255,255)_83.9344%,rgba(255,255,255,0))] box-border shrink-0 h-[1269px] left-[calc(113.846%_-_219.087px)] max-w-[960px] top-[-209px] w-[438px] overflow-hidden md:left-[calc(33.5833%_-_295.5px)] md:w-[591px]"></div>
         <div className="[mask-image:linear-gradient(90deg,rgba(0,0,0,0)_11.3985%,rgb(0,0,0)_25.5578%,rgba(0,0,0,0.55)_41.6966%,rgba(0,0,0,0.13)_67.1171%,rgb(0,0,0)_78.2306%,rgba(0,0,0,0)_97.2973%)] absolute bg-[linear-gradient(rgba(255,255,255,0.5),rgb(255,255,255)_83.9344%,rgba(255,255,255,0))] box-border shrink-0 h-[1269px] left-[calc(87.6923%_-_215.75px)] max-w-[960px] top-[-209px] w-[432px] overflow-hidden md:left-[calc(-1.5%_-_291px)] md:w-[582px]"></div>
@@ -12,8 +12,8 @@ export function HeroSection() {
         <div className="[mask-image:linear-gradient(90deg,rgba(0,0,0,0)_0%,rgb(0,0,0)_20.0362%,rgba(0,0,0,0.55)_27.5778%,rgb(0,0,0)_42.3423%,rgba(0,0,0,0)_48.6047%,rgba(0,0,0,0.13)_67.1171%,rgb(0,0,0)_74.9525%,rgb(0,0,0)_82.4324%,rgba(0,0,0,0.47)_88.6719%,rgba(0,0,0,0)_97.2973%)] absolute bg-[linear-gradient(rgba(255,255,255,0.5),rgb(255,255,255)_83.9344%,rgba(255,255,255,0))] box-border shrink-0 h-[1269px] left-[calc(125.128%_-_157.92px)] max-w-[960px] opacity-75 top-[-209px] w-[316px] overflow-hidden md:left-[calc(49.0833%_-_213px)] md:w-[426px]"></div>
       </div>
       
-      <div className="relative content-center items-center box-border gap-x-[30px] flex flex-col shrink-0 h-min justify-start max-w-[1200px] gap-y-[30px] w-full z-[3]">
-        <div className="relative content-center items-center box-border gap-x-6 flex flex-col shrink-0 h-min justify-start max-w-[1000px] gap-y-6 w-full z-[3]">
+      <div className="relative content-center items-center box-border gap-x-[30px] flex flex-col shrink-0 h-min justify-start max-w-[1200px] gap-y-[30px] w-full z-[3]" data-aos="fade-up">
+        <div className="relative content-center items-center box-border gap-x-6 flex flex-col shrink-0 h-min justify-start max-w-[1000px] gap-y-6 w-full z-[3]" data-aos="fade-up">
           <div className="relative content-center items-center bg-slate-50 shadow-[rgba(141,194,235,0.25)_0px_-3px_0px_2px_inset,rgba(16,49,77,0.21)_0px_0.706592px_0.706592px_-0.583333px,rgba(16,49,77,0.2)_0px_1.80656px_1.80656px_-1.16667px,rgba(16,49,77,0.2)_0px_3.62176px_3.62176px_-1.75px,rgba(16,49,77,0.18)_0px_6.8656px_6.8656px_-2.33333px,rgba(16,49,77,0.16)_0px_13.6468px_13.6468px_-2.91667px,rgba(16,49,77,0.09)_0px_30px_30px_-3.5px] box-border gap-x-2.5 flex shrink-0 h-min justify-center gap-y-2.5 w-min z-[2] p-2.5 rounded-2xl">
             <div className="relative content-center items-center bg-slate-900 shadow-[rgba(16,49,77,0.24)_0px_0.706592px_0.706592px_-0.666667px,rgba(16,49,77,0.23)_0px_1.80656px_1.80656px_-1.33333px,rgba(16,49,77,0.22)_0px_3.62176px_3.62176px_-2px,rgba(16,49,77,0.2)_0px_6.8656px_6.8656px_-2.66667px,rgba(16,49,77,0.16)_0px_13.6468px_13.6468px_-3.33333px,rgba(16,49,77,0.06)_0px_30px_30px_-4px] box-border gap-x-2.5 flex shrink-0 h-min justify-center gap-y-2.5 w-min p-4 rounded-[10px]">
               <div className="relative aspect-square box-border shrink-0 w-8 md:w-11">
@@ -24,7 +24,7 @@ export function HeroSection() {
             </div>
           </div>
           
-          <div className="relative content-center items-center box-border gap-x-6 flex flex-col shrink-0 h-min justify-center gap-y-6 w-full">
+          <div className="relative content-center items-center box-border gap-x-6 flex flex-col shrink-0 h-min justify-center gap-y-6 w-full" data-aos="fade-up">
             <div className="relative box-border flex flex-col shrink-0 justify-start break-words w-full z-[2]">
               <h1 className="text-slate-900 text-[40px] box-border tracking-[-0.4px] leading-[48px] break-words text-center font-plus_jakarta_sans md:text-7xl md:tracking-[-0.72px] md:leading-[86.4px]">
                 <span className="text-[40px] box-border inline-block tracking-[-0.4px] leading-[48px] break-words md:text-7xl md:tracking-[-0.72px] md:leading-[86.4px]">Bridging Innovation with Intelligence.</span>
@@ -37,7 +37,7 @@ export function HeroSection() {
             </div>
           </div>
           
-          <div className="relative content-center items-center box-border gap-x-4 flex shrink-0 flex-wrap h-min justify-center gap-y-4 w-full z-[3]">
+          <div className="relative content-center items-center box-border gap-x-4 flex shrink-0 flex-wrap h-min justify-center gap-y-4 w-full z-[3]" data-aos="fade-up">
             <div className="relative box-border shrink-0 z-[3]">
               <a href="https://framer.link/Vu5MARe" className="relative text-blue-700 content-center items-center bg-[linear-gradient(125deg,rgb(119,75,229)_-4%,rgb(119,75,229)_100%)] shadow-[rgb(192,176,232)_0px_1px_2px_0px_inset,rgba(99,69,173,0.35)_0px_0.706592px_0.706592px_-0.583333px,rgba(99,69,173,0.34)_0px_1.80656px_1.80656px_-1.16667px,rgba(99,69,173,0.33)_0px_3.62176px_3.62176px_-1.75px,rgba(99,69,173,0.3)_0px_6.8656px_6.8656px_-2.33333px,rgba(99,69,173,0.26)_0px_13.6468px_13.6468px_-2.91667px,rgba(99,69,173,0.15)_0px_30px_30px_-3.5px] box-border gap-x-1.5 flex h-min justify-center gap-y-1.5 w-min overflow-hidden px-6 py-3 rounded-[10px]">
                 <div className="relative content-center items-center box-border gap-x-2 flex shrink-0 h-min justify-start gap-y-2 w-min">

@@ -1,28 +1,28 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // Import AOS CSS
 import { Header } from './components/layout/Header';
 import { HeroSection } from './components/sections/HeroSection';
-import { AboutUsSection } from './components/sections/AboutUsSection';
 import { TechnologiesSection } from './components/sections/TechnologiesSection';
-import { WhyChooseUsSection } from './components/sections/WhyChooseUsSection';
 import { IndustriesSection } from './components/sections/IndustriesSection';
-import { ProductsSection } from './components/sections/ProductsSection';
-import { ITServicesSection } from './components/sections/ITServicesSection';
-import { CompanyLogos } from './components/sections/CompanyLogos';
-import { IntegrationsSection } from './components/sections/IntegrationsSection';
-import { InsightsSection } from './components/sections/InsightsSection';
-import { MarketingSection } from './components/sections/MarketingSection';
-import { PricingSection } from './components/sections/PricingSection';
-import { FAQSection } from './components/sections/FAQSection';
-import { TestimonialsSection } from './components/sections/TestimonialsSection';
 import { CTASection } from './components/sections/CTASection';
 import { Footer } from './components/layout/Footer';
 import { FloatingElements } from './components/ui/FloatingElements';
+import { AboutWhySection } from './components/sections/AboutWhySection';
+import { ProductsServicesSection } from './components/sections/ProductsServicesSection';
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration
+      once: true, // whether animation should happen only once - while scrolling down
+    });
+  }, []);
+
   return (
-    <div className="text-black text-xs not-italic normal-nums font-normal accent-auto box-border block tracking-[normal] leading-[normal] list-outside list-disc text-start indent-[0px] normal-case visible border-separate font-sans_serif">
-      <div className="box-border">
-        <div className="relative content-center items-center box-border gap-x-0 flex flex-col h-min justify-start min-h-[1000px] gap-y-0 overflow-hidden">
+    <div className="text-black text-xs not-italic normal-nums font-normal accent-auto box-border block tracking-[normal] leading-[normal] list-outside list-disc text-start indent-[0px] normal-case visible border-separate font-sans_serif w-full">
+      <div className="box-border w-full">
+        <div className="relative content-center items-center box-border gap-x-0 flex flex-col h-min justify-start min-h-[1000px] gap-y-0 overflow-hidden w-full">
           <div className="absolute bg-[url('https://framerusercontent.com/images/6mcf62RlDfRfU61Yg5vb2pefpi4.png')] bg-size-[128px] box-border inset-0"></div>
           <div className="box-content block md:aspect-auto md:box-border md:contents md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
             <div className="static box-content shrink transform-none z-auto left-auto top-auto md:fixed md:aspect-auto md:box-border md:shrink-0 md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:translate-x-[-50.0%] md:z-[9] md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:left-2/4 md:top-2.5">
@@ -69,18 +69,10 @@ function App() {
           </div>
 
           <HeroSection />
-          <AboutUsSection />
-          <WhyChooseUsSection />
+          <AboutWhySection />
           <TechnologiesSection />
-          <ProductsSection />
-          <ITServicesSection />
+          <ProductsServicesSection />
           <IndustriesSection />
-          {/* <IntegrationsSection />
-          <InsightsSection />
-          <MarketingSection />
-          <PricingSection />
-          <FAQSection />
-          <TestimonialsSection /> */}
           <CTASection />
         </div>
         
