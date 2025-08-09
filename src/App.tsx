@@ -70,11 +70,11 @@ function App() {
 
           <HeroSection />
           <AboutUsSection />
-          <TechnologiesSection />
           <WhyChooseUsSection />
-          <IndustriesSection />
+          <TechnologiesSection />
           <ProductsSection />
           <ITServicesSection />
+          <IndustriesSection />
           {/* <IntegrationsSection />
           <InsightsSection />
           <MarketingSection />

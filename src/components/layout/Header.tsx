@@ -36,7 +36,7 @@ export function Header() {
           ))}
         </nav>
         
-        <div className="static [align-items:normal] box-content gap-x-[normal] block shrink h-auto justify-normal min-h-0 min-w-0 gap-y-[normal] w-auto md:relative md:content-center md:items-center md:aspect-auto md:box-border md:gap-x-4 md:flex md:shrink-0 md:h-min md:justify-end md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:gap-y-4 md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-min md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
+        {/* <div className="static [align-items:normal] box-content gap-x-[normal] block shrink h-auto justify-normal min-h-0 min-w-0 gap-y-[normal] w-auto md:relative md:content-center md:items-center md:aspect-auto md:box-border md:gap-x-4 md:flex md:shrink-0 md:h-min md:justify-end md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:gap-y-4 md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-min md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
           <div className="static box-content shrink min-h-0 min-w-0 z-auto md:relative md:aspect-auto md:box-border md:shrink-0 md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:z-[3] md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
             <a href="https://framer.link/Vu5MARe" className="static text-black [align-items:normal] bg-none shadow-none box-content gap-x-[normal] inline h-auto justify-normal gap-y-[normal] w-auto p-0 rounded-none md:relative md:text-blue-700 md:content-center md:items-center md:aspect-auto md:bg-[linear-gradient(127deg,rgb(14,28,41)_-68%,rgb(50,61,104)_100%)] md:shadow-[rgb(184,193,230)_0px_1px_2px_0px_inset,rgba(46,64,128,0.35)_0px_0.706592px_0.706592px_-0.583333px,rgba(46,64,128,0.34)_0px_1.80656px_1.80656px_-1.16667px,rgba(46,64,128,0.33)_0px_3.62176px_3.62176px_-1.75px,rgba(46,64,128,0.3)_0px_6.8656px_6.8656px_-2.33333px,rgba(46,64,128,0.26)_0px_13.6468px_13.6468px_-2.91667px,rgba(46,64,128,0.15)_0px_30px_30px_-3.5px] md:box-border md:gap-x-1.5 md:flex md:h-min md:justify-center md:overscroll-x-auto md:overscroll-y-auto md:gap-y-1.5 md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-min md:overflow-hidden md:[mask-position:0%] md:bg-left-top md:px-6 md:py-3 md:scroll-m-0 md:scroll-p-[auto] md:rounded-[10px]">
               <div className="static [align-items:normal] box-content gap-x-[normal] block shrink h-auto justify-normal min-h-0 min-w-0 gap-y-[normal] w-auto md:relative md:content-center md:items-center md:aspect-auto md:box-border md:gap-x-2 md:flex md:shrink-0 md:h-min md:justify-start md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:gap-y-2 md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-min md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
@@ -51,7 +51,7 @@ export function Header() {
               </div>
             </a>
           </div>
-        </div>
+        </div> */}
       </div>
     </header>
   );

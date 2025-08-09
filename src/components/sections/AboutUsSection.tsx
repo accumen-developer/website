@@ -37,7 +37,7 @@ export function AboutUsSection() {
           </div>
         </div>
         
-        <div className="relative content-center items-center box-border gap-x-8 flex flex-col shrink-0 h-min justify-center gap-y-8 w-full md:flex-row">
+        {/* <div className="relative content-center items-center box-border gap-x-8 flex flex-col shrink-0 h-min justify-center gap-y-8 w-full md:flex-row">
           <div className="box-content block md:aspect-auto md:box-border md:contents md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
             <div className="static box-content basis-auto grow-0 shrink min-h-0 min-w-0 w-auto md:relative md:aspect-auto md:box-border md:basis-0 md:grow md:shrink-0 md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-px md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
               <div className="static [align-items:normal] bg-transparent shadow-none box-content gap-x-[normal] block h-auto justify-normal gap-y-[normal] w-auto rounded-none md:relative md:content-center md:items-center md:aspect-auto md:bg-slate-50 md:shadow-[rgba(16,49,77,0.05)_0px_0.706592px_0.706592px_-0.291667px,rgba(16,49,77,0.06)_0px_1.80656px_1.80656px_-0.583333px,rgba(16,49,77,0.06)_0px_3.62176px_3.62176px_-0.875px,rgba(16,49,77,0.06)_0px_6.8656px_6.8656px_-1.16667px,rgba(16,49,77,0.07)_0px_13.6468px_13.6468px_-1.45833px,rgba(16,49,77,0.1)_0px_30px_30px_-1.75px] md:box-border md:gap-x-8 md:flex md:h-min md:justify-center md:overscroll-x-auto md:overscroll-y-auto md:gap-y-8 md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-full md:overflow-hidden md:[mask-position:0%] md:bg-left-top md:p-8 md:scroll-m-0 md:scroll-p-[auto] md:rounded-2xl">
@@ -101,7 +101,7 @@ export function AboutUsSection() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
