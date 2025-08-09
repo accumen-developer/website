@@ -1,9 +1,36 @@
-import React from 'react';
+import React, { useRef, useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { whyChooseUsItems } from '../../data/whyChooseUs';
 
 export function AboutUsSection() {
+
+  const controls = useAnimation();
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    const containerHeight = containerRef.current.clientHeight;
+    const listHeight = containerRef.current.scrollHeight;
+
+    const animateScroll = async () => {
+      // Loop a number of times to create a longer-seeming continuous scroll
+      await controls.start({
+        y: -listHeight + containerHeight, // Scroll to the end of the list
+        transition: {
+          duration: 15, // Adjust duration for speed
+          ease: "linear",
+          loop: Infinity, // Loop infinitely
+          repeatType: "mirror", // Reverses the animation for a seamless back and forth
+        },
+      });
+    };
+
+    animateScroll();
+  }, [controls]);
+
+
   return (
     <section id="about-us" className="relative content-center items-center box-border gap-x-8 flex flex-col shrink-0 h-min justify-center gap-y-8 w-full px-[18px] py-20 rounded-[20px] md:px-10 md:py-[100px]">
-      <div className="relative content-center items-center box-border gap-x-11 flex flex-col shrink-0 h-min justify-start max-w-[1200px] gap-y-11 w-full z-[3]">
+      <div className="relative content-center items-center box-border gap-x-11 flex shrink-0 h-min justify-start max-w-[1200px] gap-y-11 w-full z-[3]">
         <div className="relative content-center items-center box-border gap-x-4 flex flex-col shrink-0 h-min justify-start max-w-screen-sm gap-y-4 w-full z-[3]">
           <div className="relative box-border shrink-0">
             <div className="relative content-center items-center bg-sky-50/90 shadow-[rgba(240,248,255,0.9)_0px_0px_0px_2px] box-border gap-x-2 flex h-min justify-center gap-y-2 w-min overflow-hidden px-3 py-0.5 rounded-[60px] after:accent-auto after:box-border after:text-black after:block after:text-xs after:not-italic after:normal-nums after:font-normal after:h-full after:tracking-[normal] after:leading-[normal] after:list-outside after:list-disc after:absolute after:text-start after:indent-[0px] after:normal-case after:visible after:w-full after:border after:border-zinc-200 after:rounded-[60px] after:border-separate after:border-solid after:left-0 after:top-0 after:font-sans_serif">
@@ -36,7 +63,20 @@ export function AboutUsSection() {
             </div>
           </div>
         </div>
-        
+
+        <div ref={containerRef} className='relative content-center items-center box-border gap-x-4 flex flex-col shrink-0 h-[300px] justify-start max-w-screen-sm gap-y-4 w-full z-[3]'>
+          <motion.ul
+            animate={controls}
+          >
+            {whyChooseUsItems.map((card) => (
+              <li className="bg-white rounded-lg shadow-lg p-4 flex items-center justify-between max-w-[400px] min-w-[390px] mx-auto">
+                <span className="text-gray-800 text-lg font-semibold text-center w-[300px]">{card?.title}</span>
+                <img src={card?.icon} alt="Piggy Bank" className="h-8 w-8" />
+              </li>
+            ))}
+          </motion.ul>
+        </div>
+
         {/* <div className="relative content-center items-center box-border gap-x-8 flex flex-col shrink-0 h-min justify-center gap-y-8 w-full md:flex-row">
           <div className="box-content block md:aspect-auto md:box-border md:contents md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
             <div className="static box-content basis-auto grow-0 shrink min-h-0 min-w-0 w-auto md:relative md:aspect-auto md:box-border md:basis-0 md:grow md:shrink-0 md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-px md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
