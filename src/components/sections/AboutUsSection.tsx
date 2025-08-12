@@ -68,10 +68,10 @@ export function AboutUsSection() {
 
         <div className='relative content-center items-center box-border gap-x-4 flex flex-col shrink-0 justify-start max-w-screen-sm gap-y-4 w-full z-[3]'>
 
-          <div className="w-full max-w-sm mx-auto h-[400px] overflow-hidden bg-white shadow-xl rounded-lg border border-gray-200">
+          <div className="w-full max-w-sm mx-auto h-[400px] overflow-hidden rounded-lg">
             <motion.ul
               ref={listRef}
-              className="list-none p-0 m-0"
+              className="list-none p-0 m-0 flex items-center justify-between flex-col gap-2.5 "
               animate={controls}
             >
               {items.map((card) => (
