@@ -74,8 +74,8 @@ export function AboutUsSection() {
               className="list-none p-0 m-0 flex items-center justify-between flex-col gap-2.5 "
               animate={controls}
             >
-              {items.map((card) => (
-                <li className="bg-white rounded-lg shadow-lg p-4 flex items-center justify-between max-w-[400px] min-w-[390px] mx-auto">
+              {items.map((card,id) => (
+                <li key={id} className="bg-white rounded-lg shadow-lg p-4 flex items-center justify-between max-w-[400px] min-w-[390px] mx-auto">
                   <span className="text-gray-800 text-lg font-semibold text-center w-[300px]">{card?.title}</span>
                   <img src={card?.icon} alt="Piggy Bank" className="h-8 w-8" />
                 </li>

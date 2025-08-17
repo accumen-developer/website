@@ -1,9 +1,68 @@
-import React from 'react';
+import React, { useRef, useEffect } from "react";
 import { productItems } from '../../data/products';
+import { scrollingTextItems1, scrollingTextItems2 } from '../../data/scrollingtexts';
+import {
+  StackedCarousel,
+  ResponsiveContainer
+} from "react-stacked-center-carousel";
+import { Slide } from "../packages/Slide";
+import Fab from "@mui/material/Fab";
+import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import { motion, useAnimation } from "framer-motion";
 
 export function ProductsSection() {
+
+  const ref: any = React.useRef(StackedCarousel);
+
+  const items1 = [...scrollingTextItems1, ...scrollingTextItems1];
+  const items2 = [...scrollingTextItems2, ...scrollingTextItems2];
+
+  const listRef = useRef(null);
+  const controls1 = useAnimation();
+  const controls2 = useAnimation();
+
+  useEffect(() => {
+    // We only need to start the animation once
+    if (!listRef.current) return;
+
+    const singleListWidth = listRef.current.scrollWidth / 2;
+
+    controls1.start({
+      x: [0, -singleListWidth], // Scrolls up by the height of one list copy
+      transition: {
+        x: {
+          duration: 30, // Adjust for desired speed
+          ease: "linear",
+          repeat: Infinity,
+          repeatType: "loop", // Instantly resets to the start after each loop
+        },
+      },
+    });
+
+  }, [controls1]);
+  useEffect(() => {
+    // We only need to start the animation once
+    if (!listRef.current) return;
+
+    const singleListWidth = listRef.current.scrollWidth / 2;
+
+    controls2.start({
+      x: [-singleListWidth, 0], // Scrolls up by the height of one list copy
+      transition: {
+        x: {
+          duration: 30, // Adjust for desired speed
+          ease: "linear",
+          repeat: Infinity,
+          repeatType: "loop", // Instantly resets to the start after each loop
+        },
+      },
+    });
+
+  }, [controls2]);
+
   return (
-    <section id="products" className="relative content-center items-center bg-zinc-200 box-border gap-x-20 flex flex-col shrink-0 h-min justify-center max-w-[1200px] gap-y-20 w-full z-[1] overflow-hidden px-[18px] py-20 rounded-[20px] md:gap-x-8 md:gap-y-8 md:px-10 md:py-[100px]">
+    <section id="products" className="relative content-center items-center box-border gap-x-20 flex flex-col shrink-0 h-min justify-center max-w-[1200px] gap-y-20 w-full z-[1] overflow-hidden px-[18px] py-20 rounded-[20px] md:gap-x-8 md:gap-y-8 md:px-10 md:py-[100px]">
       <div className="relative content-center items-center box-border gap-x-11 flex flex-col shrink-0 h-min justify-start gap-y-11 w-full z-[3]">
         <div className="relative content-center items-center box-border gap-x-4 flex flex-col shrink-0 h-min justify-start max-w-screen-sm gap-y-4 w-full z-[3]">
           <div className="relative box-border shrink-0">
@@ -32,7 +91,105 @@ export function ProductsSection() {
           </div>
         </div>
 
-        <div className="relative content-center items-center box-border gap-x-8 flex flex-col shrink-0 h-min justify-center gap-y-8 w-full">
+        <div className="w-screen h-[300px]">
+          <div style={{ width: "100%", position: "relative" }}>
+            <ResponsiveContainer
+              carouselRef={ref}
+              render={(width, carouselRef) => {
+                return (
+                  <StackedCarousel
+                    ref={carouselRef}
+                    slideComponent={Slide}
+                    slideWidth={450}
+                    carouselWidth={width}
+                    data={productItems}
+                    maxVisibleSlide={5}
+                    currentVisibleSlide={3}
+                    disableSwipe
+                    transitionTime={450}
+                  />
+                );
+              }}
+            />
+            <Fab
+              className='card-button left'
+              style={{ position: "absolute", top: "40%", left: 10, zIndex: 10 }}
+              size='small'
+              color="primary"
+              onClick={() => ref.current?.goBack()}
+            >
+              <KeyboardArrowLeftIcon style={{ fontSize: 30 }} />
+            </Fab>
+            <Fab
+              className='card-button right'
+              style={{ position: "absolute", top: "40%", right: 10, zIndex: 10 }}
+              size='small'
+              color="primary"
+              onClick={() => ref.current?.goNext()}
+            >
+              <KeyboardArrowRightIcon style={{ fontSize: 30 }} />
+            </Fab>
+          </div>
+        </div>
+
+        <div className="relative content-center items-center box-border gap-x-0 flex flex-col shrink-0 h-min justify-center gap-y-0 w-full overflow-hidden">
+          <div className="relative box-border shrink-0 h-[88px] max-w-screen-xl w-full md:h-20">
+            <div className="box-content block md:aspect-auto md:box-border md:contents md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
+              <section className="[align-items:normal] box-content block h-auto list-disc max-h-none max-w-none w-auto md:[mask-image:linear-gradient(to_right,rgba(0,0,0,0)_0%,rgb(0,0,0)_12.5%,rgb(0,0,0)_87.5%,rgba(0,0,0,0)_100%)] md:items-center md:aspect-auto md:box-border md:flex md:h-full md:justify-items-center md:list-none md:max-h-full md:max-w-full md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-full md:overflow-hidden md:[mask-position:0%] md:bg-left-top md:p-2.5 md:scroll-m-0 md:scroll-p-[auto]">
+                <div className="w-full mx-auto overflow-hidden rounded-lg">
+                  <motion.ul
+                    ref={listRef}
+                    className="list-none p-0 m-0 flex items-center justify-between gap-2.5 w-full"
+                    animate={controls1}
+                  >
+                    {Array.from({ length: 4 }).map((_, groupIndex) =>
+                      scrollingTextItems1.map((item) => (
+                        <li key={`${item.id}-${groupIndex}`} className="box-content h-auto min-h-0 min-w-0 text-left md:aspect-auto md:box-border md:h-12 md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
+                          <div className="static box-content shrink h-auto md:relative md:aspect-auto md:box-border md:shrink-0 md:h-12 md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
+                            <div className="static [align-items:normal] bg-transparent box-content gap-x-[normal] block flex-row h-auto justify-normal gap-y-[normal] w-auto p-0 rounded-none md:relative md:content-center md:items-center md:aspect-auto md:bg-zinc-200 md:box-border md:gap-x-2.5 md:flex md:flex-col md:h-min md:justify-center md:overscroll-x-auto md:overscroll-y-auto md:gap-y-2.5 md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-min md:overflow-hidden md:[mask-position:0%] md:bg-left-top md:px-6 md:py-3 md:scroll-m-0 md:scroll-p-[auto] md:rounded-[228px]">
+                              <div className="static box-content block flex-row shrink justify-normal min-h-0 min-w-0 text-wrap md:relative md:aspect-auto md:box-border md:flex md:flex-col md:shrink-0 md:justify-center md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:text-nowrap md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
+                                <p className="text-black text-base box-content leading-[normal] min-h-0 min-w-0 text-start text-wrap font-times md:text-slate-900 md:aspect-auto md:box-border md:leading-6 md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:text-center md:decoration-auto md:underline-offset-auto md:text-nowrap md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:font-inter">{item.text}</p>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      ))
+                    )}
+                  </motion.ul>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div className="relative box-border shrink-0 h-[78px] max-w-screen-xl w-full md:h-20">
+            <div className="box-content block md:aspect-auto md:box-border md:contents md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
+              <section className="[align-items:normal] box-content block h-auto list-disc max-h-none max-w-none w-auto md:[mask-image:linear-gradient(to_right,rgba(0,0,0,0)_0%,rgb(0,0,0)_12.5%,rgb(0,0,0)_87.5%,rgba(0,0,0,0)_100%)] md:items-center md:aspect-auto md:box-border md:flex md:h-full md:justify-items-center md:list-none md:max-h-full md:max-w-full md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-full md:overflow-hidden md:[mask-position:0%] md:bg-left-top md:p-2.5 md:scroll-m-0 md:scroll-p-[auto]">
+                <div className="w-full mx-auto overflow-hidden rounded-lg">
+                  <motion.ul
+                    ref={listRef}
+                    className="list-none p-0 m-0 flex items-center justify-between gap-2.5 w-full"
+                    animate={controls2}
+                  >
+                    {Array.from({ length: 4 }).map((_, groupIndex) =>
+                      scrollingTextItems2.map((item) => (
+                        <li key={`${item.id}-${groupIndex}`} className="box-content h-auto min-h-0 min-w-0 text-left md:aspect-auto md:box-border md:h-12 md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
+                          <div className="static box-content shrink h-auto md:relative md:aspect-auto md:box-border md:shrink-0 md:h-12 md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
+                            <div className="static [align-items:normal] bg-transparent box-content gap-x-[normal] block flex-row h-auto justify-normal gap-y-[normal] w-auto p-0 rounded-none md:relative md:content-center md:items-center md:aspect-auto md:bg-zinc-200 md:box-border md:gap-x-2.5 md:flex md:flex-col md:h-min md:justify-center md:overscroll-x-auto md:overscroll-y-auto md:gap-y-2.5 md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-min md:overflow-hidden md:[mask-position:0%] md:bg-left-top md:px-6 md:py-3 md:scroll-m-0 md:scroll-p-[auto] md:rounded-[228px]">
+                              <div className="static box-content block flex-row shrink justify-normal min-h-0 min-w-0 text-wrap md:relative md:aspect-auto md:box-border md:flex md:flex-col md:shrink-0 md:justify-center md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:text-nowrap md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
+                                <p className="text-black text-base box-content leading-[normal] min-h-0 min-w-0 text-start text-wrap font-times md:text-slate-900 md:aspect-auto md:box-border md:leading-6 md:min-h-[auto] md:min-w-[auto] md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:text-center md:decoration-auto md:underline-offset-auto md:text-nowrap md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto] md:font-inter">{item.text}</p>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      ))
+                    )}
+                  </motion.ul>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+
+        {/* <div className="relative content-center items-center box-border gap-x-8 flex flex-col shrink-0 h-min justify-center gap-y-8 w-full">
           <div className="relative content-start items-start box-border gap-x-8 flex flex-col shrink-0 h-min justify-center gap-y-8 w-full md:flex-row">
             {productItems.slice(0, 3).map((card) => (
               <div key={card.id} className="box-content block md:aspect-auto md:box-border md:contents md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:[mask-position:0%] md:bg-left-top md:scroll-m-0 md:scroll-p-[auto]">
@@ -151,7 +308,7 @@ export function ProductsSection() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

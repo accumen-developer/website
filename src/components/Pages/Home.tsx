@@ -13,11 +13,11 @@ function Home() {
         <div>
             <HeroSection />
             <AboutUsSection />
-            <WhyChooseUsSection />
+            {/* <WhyChooseUsSection /> */}
             <TechnologiesSection />
             <ProductsSection />
             <ITServicesSection />
-            <IndustriesSection />
+            {/* <IndustriesSection /> */}
             <CTASection />
         </div>
     )
